@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var s="Ciao Mondo";
+        var lung=s.length;//Lunghezza della stringa
+        document.write("<h3>la stringa è lunga "+lung+"</h3>");
+        var c=s.charAt(0); //Estraggo il primo carattere
+        document.write("<h3>La stringa inizia con "+c+"</h3>");
+        console.log("La stringa inizia con "+c);
+        var c1=s[0]; ///Estraggo il primo carattere
+        var ind=s.indexOf("Mondo"); // estrae la prima posizione del carattere o della sotto stringa
+        document.write("<h3>La parola Mondo inizia in posizione "+ind+"</h3>");
+        var ind1=s.lastIndexOf('o');
+        document.write("<h3>L'ultima o è in posizione "+ind1+"</h3>");
+        // Se la sottostringa o il carattere non sono presenti restituisce -1
+        var s1=s.substring(0,4); //Estrae una sottostringa a partire dalla posizione 0 alla posizione 3
+        var s2=s.substring(5); //Estrae una sottostringa da posizione 5 alla fine
+        console.log(s1);
+        console.log(s2);
+        var s3=s.replace("Ciao","Hello");//Sostituisce Ciao con Hello
+        console.log(s3);
+        var s4=s.toUpperCase(); //Converte i caratteri in maiuscolo
+        var s5=s.toLowerCase(); //Converte in minuscolo
+        console.log(s4);
+        console.log(s5);
+        var vett=s.split(" ");
+        console.log(vett);
+        var frutta="Banana,Pera,Mandarino,Mela";
+        var vett1=frutta.split(",");
+        console.log(vett1);
+        var n=65;
+        var carattere=String.fromCharCode(n);
+        console.log(carattere);
+        var lettera='A';
+        var codAscii=lettera.charCodeAt(0);
+        console.log(codAscii);
+        var saluto="Ciao";
+        for(var i=0;i<saluto.length;i++){
+            console.log(saluto.charCodeAt(i));
+        }
+    </script>
+</body>
+</html>

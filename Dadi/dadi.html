@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lancio dei Dadi</title>
+</head>
+<body>
+    <h1>Lancio dei Dadi</h1>
+    <button onclick="rollDice()">Lancia i dadi</button>
+    <div>
+        <img id="dice1" class="dice" src="1.png" alt="Dice 1">
+        <img id="dice2" class="dice" src="1.png" alt="Dice 2">
+    </div>
+
+    <script>
+        function rollDice() {
+            var dice1 = Math.floor(Math.random() * 6) + 1;
+            var dice2 = Math.floor(Math.random() * 6) + 1;
+
+            document.getElementById('dice1').src = dice1 + '.png';
+            document.getElementById('dice2').src = dice2 + '.png';
+        }
+    </script>
+</body>
+</html></html>

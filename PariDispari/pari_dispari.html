@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pari e Dispari</title>
+</head>
+<body>
+    <h1>Numeri Pari e Dispari</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Pari</th>
+                <th>Dispari</th>
+            </tr>
+        </thead>
+        <tbody >
+            <tr>
+                <td id="even1"></td>
+                <td id="odd1"></td>
+            </tr>
+            <tr>
+                <td id="even2"></td>
+                <td id="odd2"></td>
+            </tr>
+            <tr>
+                <td id="even3"></td>
+                <td id="odd3"></td>
+            </tr>
+            <tr>
+                <td id="even4"></td>
+                <td id="odd4"></td>
+            </tr>
+            <tr>
+                <td id="even5"></td>
+                <td id="odd5"></td>
+            </tr>
+            <tr>
+                <td id="even6"></td>
+                <td id="odd6"></td>
+            </tr>
+            <tr>
+                <td id="even7"></td>
+                <td id="odd7"></td>
+            </tr>
+            <tr>
+                <td id="even8"></td>
+                <td id="odd8"></td>
+            </tr>
+            <tr>
+                <td id="even9"></td>
+                <td id="odd9"></td>
+            </tr>
+            <tr>
+                <td id="even10"></td>
+                <td id="odd10"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        function generateRandomNumbers() {
+            var randomNumbers = [];
+            for (var i = 0; i < 10; i++) {
+                var num = Math.floor(Math.random() * 90) + 1;
+                randomNumbers.push(num);
+            }
+            return randomNumbers;
+        }
+
+        function displayNumbers() {
+            
+            var randomNumbers = generateRandomNumbers();
+
+            var evenNumbers = [];
+            var oddNumbers = [];
+
+            for (var i = 0; i < 10; i++) {
+                if (randomNumbers[i] % 2 === 0) {
+                    evenNumbers.push(randomNumbers[i]);
+                } else {
+                    oddNumbers.push(randomNumbers[i]);
+                }
+            }
+
+            for (var i = 1; i <= evenNumbers.length; i++) {
+                document.getElementById('even' + i).textContent = evenNumbers[i];
+            }
+
+            for (var i = 1; i <= oddNumbers.length; i++) {
+                document.getElementById('odd' + i).textContent = oddNumbers[i];
+            }
+        }
+
+        displayNumbers();
+    </script>
+</body>
+</html></tbody></html>

@@ -1,0 +1,8 @@
+-  Scrivi una funzione che riceva una stringa e la restituisca crittografata 
+    secondo l'algoritmo di Cesare che prevede
+    lo spostamento di ogni carattere con quello 
+    che sta 3 posti in avanti nell'alfabeto (attenzione alla circolarità)
+-  Scrivi una funzione che prenda una frase e ne inverta l’ordine delle parole
+-  Scrivi una funzione che trasformi ogni carattere di una stringa nel suo codice ASCII
+-  Scrivi una funzione che converta un array di numeri ASCII nei loro caratteri corrispondenti
+- Scrivi una funzione che generi 10 numeri casuali compresi fra 1 e 90, divida i pari dai dispari e li rappresenti all'interno di una tabella con due colonne

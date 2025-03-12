@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizza Nome</title>
+</head>
+<body>
+    <form id="nameForm">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="size">Dimensione (1-7):</label>
+        <input type="number" id="size" name="size" min="1" max="7" required>
+        <br>
+        <label for="color">Colore (in inglese):</label>
+        <input type="text" id="color" name="color" required>
+        <br>
+        <button type="button" onclick="displayText()">Visualizza</button>
+    </form>
+    <div id="output"></div>
+
+    <script>
+        function displayText() {
+            var name = document.getElementById('name').value;
+            var size = document.getElementById('size').value;
+            var color = document.getElementById('color').value;
+
+            var outputDiv = document.getElementById('output');
+            outputDiv.innerHTML = `<font size="${size}" color="${color}">${name}</font>`;
+        }
+    </script>
+</body>
+</html></form></html>

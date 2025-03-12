@@ -1,0 +1,18 @@
+1. Scrivi una funzione che conti il numero di vocali (sia maiuscole che minuscole) 
+    presenti in una stringa.
+2.  Scrivi una funzione che trasformi una stringa in "title case", 
+    ovvero con la prima lettera di ogni parola in maiuscolo e il resto in minuscolo.
+3. Scrivi una funzione che prenda una stringa e sostituisca tutte le vocali 
+(a, e, i, o, u) con un carattere specificato (ad esempio, *).
+4. Scrivi una funzione che conti il numero di parole in una stringa.
+    Considera che le parole sono separate da spazi
+5. Scrivi una funzione che arrotonda un numero decimale a un numero specificato 
+    di cifre decimali.
+6. Scrivi due funzioni che, dato il raggio di un cerchio, 
+    calcolino rispettivamente l'area e la circonferenza.
+7. Scrivi una funzione in JavaScript che generi una stringa casuale di 
+    lunghezza specificata. La stringa deve essere composta da lettere 
+    (maiuscole e minuscole) e numeri
+8. Scaricare le immagini delle facce di un dado da https://drive.google.com/drive/folders/15ud3oQTpU_LXyr7mshhdRGS-XmxpFnob?usp=sharing effettuare poi il lancio di due dadi e mostrare a video le immagini dei due dadi
+9. Scegliere casualmente una fra 3 immagini e mostrarla a video
+10. Ricevere un nome da tastiera, la dimensione (da 1 a 7) e il colore (in inglese). Visualizzarlo poi secondo le specifiche ricevute (usare il TAG FONT)

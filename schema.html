@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Divisione -->
+    <div id="idDiv">
+        <!-- Titolo -->
+        <h1>Titolo</h1> 
+        <!-- Immagine -->
+        <img id="idImage" src="cartella/immagine.png" alt="Testo alternativo" width="500">
+        <!-- Bottone -->
+        <button onclick="funzione()">Testo bottone</button>
+    </div>
+
+    <form id="idForm">
+        <!-- Etichetta -->
+        <label for="testo">Etichetta</label>
+        <!-- Casella di testo -->
+        <input type="text" id="testo" name="testo">
+        <!-- A capo -->
+        <br>
+        <input type="number" id="numero" name="numero" min="1" max="10">
+        <input type="button" onclick="funzione()" value="Testo bottone">
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>header colonna 1</th>
+                <th>header colonna 2</th>
+            </tr>
+        </thead>
+        <tbody >
+            <tr>
+                <td>elemento riga 1 colonna 1</td>
+                <td>elemento riga 1 colonna 2</td>
+            </tr>
+            <tr>
+                <td>elemento riga 2 colonna 1</td>
+                <td>elemento riga 2 colonna 2</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        // Output video
+        console.log("Hello world");
+
+        // Dichiarazione variabili
+        var s = "Ciao Mondo";
+        var n = 0;
+        var vett = [1, 2, 3, 4, 5];
+
+        // Condizione
+        if (n === 0) {
+            // Codice
+        } else {
+            // Codice
+        }
+
+        // Funzione
+        function funzione() {
+            // Codice
+        }
+
+        // For
+        for (var i = 0; i < 10; i++) {
+            // Codice
+        }
+
+        var lung = s.length; //Lunghezza della stringa
+        var dim = vett.length; //Lunghezza del vettore
+
+        var c1 = s[0]; //Estraggo il primo carattere della stringa
+        var n1 = vett[0]; //Estraggo il primo elemento del vettore
+
+        vett.push(6); // Aggiunge un elemento in coda al vettore
+        vett.pop(); // Rimuove l'ultimo elemento del vettore
+
+        var s1 = s.substring(0,4); //Estrae una sottostringa a partire dalla posizione 0 alla posizione 3
+        var s2 = s.substring(5); //Estrae una sottostringa da posizione 5 alla fine
+
+        var s3 = s.replace("Ciao","Hello");//Sostituisce Ciao con Hello
+
+        var s4 = s.toUpperCase(); //Converte i caratteri in maiuscolo
+        var s5 = s.toLowerCase(); //Converte in minuscolo
+
+        var parole = s.split(" "); // Separa la stringa in un vettore di parole
+        // ["Ciao", "Mondo"]
+
+        var parole_invertite = parole.reverse(); // Inverte l'ordine delle parole
+        // ["Mondo", "Ciao"]
+
+        var s6 = parole.join(" "); // Unisce le parole in una stringa
+        // "Ciao Mondo"
+
+        var ind = s.indexOf("Mondo"); // estrae la prima posizione del carattere o della sotto stringa
+        // 5
+        ind = parole.indexOf("Mondo")
+        // 1
+        ind = vett.indexOf(3);
+        // 2
+
+        n=65;
+        var carattere = String.fromCharCode(n); // Restituisce il carattere corrispondente al codice ASCII
+        // "A"
+
+        var name = "Alice";
+        var codAscii = char.charCodeAt(0); // Restituisce il codice ASCII del carattere in posizione 0
+
+        // arrotondare un numero alla n-esima cifra decimale
+        var numero_cifre = 2;
+        var numero = 3.14159;
+        // moltiplicazione per 10^n
+        numero *= Math.pow(10, numero_cifre);
+        // arrotondamento per difetto
+        numero = Math.floor(numero);
+        // divisione per 10^n
+        numero /= Math.pow(10, numero_cifre);
+
+        // arrotondamento per eccesso
+        var numero2 = Math.ceil(numero);
+
+        // arrotondamento all'intero più vicino
+        var numero3 = Math.round(numero);
+
+        // modifica del contenuto di un elemento HTML
+        document.getElementById('idImage').src = "cartella/immagine.png";
+        document.getElementById('idProperty').value = 10;
+        document.getElementById('idButton').textContent = "testo bottone";
+
+        // modifica del contenuto di una divisione tramite innerHTML
+        var div = document.getElementById('idDiv').innerHTML = 
+            `<font size="${size}" color="${color}">${name}</font>`;
+        // backtick ` alt + 96
+
+    </script>
+</body>
+</html>

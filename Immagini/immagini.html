@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immagini Casuali</title>
+</head>
+<body>
+    <h1>Immagine Casuale</h1>
+    <img id="randomImage" src="" alt="Immagine Casuale" width="500">
+    
+    <script>
+        var images = [
+            '001.png',
+            '004.png',
+            '007.png',
+        ];
+
+        function getRandomImage() {
+            const randomIndex = Math.floor(Math.random() * images.length);
+            return images[randomIndex];
+        }
+
+        document.getElementById('randomImage').src = getRandomImage();
+    </script>
+</body>
+</html></html>
