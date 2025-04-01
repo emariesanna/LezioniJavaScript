@@ -1,0 +1,13 @@
+
+1.	Scrivi una funzione che garantisca che una stringa ricevuta da tastiera 
+    sia più lunga di N caratteri. La funzione deve restituire la stringa al programma chiamante [1 punto]
+2.	Scrivi una funzione che maschera con un asterisco (*) tutti i caratteri tranne gli ultimi n
+    di una stringa. (Ad esempio se n=4 e la stringa è maremoto  ****moto) [1 punto]
+3.	Scrivi una funzione che estrae tutti i numeri da una stringa e li restituisce come un array [1.5 punti]
+4.	Scrivi una funzione che effettui su un array le seguenti operazioni [1.5 punti]
+    a.	Filtrare solo i numeri >5
+    b.	Elevarli a quadrato
+    c.	Trovare il totale
+5.	Scrivi una funzione che crei una tabella con N righe e M colonne contenente i numeri naturali 
+    a partire da 1 [1.5 punti]
+6.	Scrivi un programma che a partire da un array di numeri interi casuali compresi fra 1 e 100, li ordini e generi in HTML una lista non ordinata [1.5 punti]

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function es1(N) {
+            var stringa = prompt("Inserisci una stringa più lunga di " + N + " caratteri:");
+            if (stringa.length < N) {
+                console.log(`La stringa è troppo corta, ha soltanto ${stringa.length} caratteri.`);
+            } else {
+                console.log(`La stringa è lunga ${stringa.length} caratteri.`);
+            }
+            return stringa;
+        }
+
+        function es2(N, stringa) {
+            if (stringa.length <= N) {
+                lenght = stringa.length;
+                stringa = "";
+                for (var i = 0; i < lenght; i++) {
+                    stringa += "*";
+                }
+            } else {
+                substring = stringa.substring(N);
+                stringa = "";
+                for (var i = 0; i < lenght; i++) {
+                    stringa += "*";
+                }
+                stringa += substring;
+            }
+        }
+
+        function es2_alt(N, stringa) {
+            N = min(stringa.length, N);
+            for (var i = 0; i < N; i++) {
+                stringa[i] = "*";
+            }
+        }
+
+        function es3(stringa) {
+            array = [];
+            for (var i = 0; i < stringa.length; i++) {
+                array.push(stringa[i].toNumber());
+            }
+        }
+
+        function es4(array) {
+            var totale = 0;
+            for (var i = 0; i < array.length; i++) {
+                if (array[i] > 5) {
+                    totale += array[i]**2;
+                }
+            }
+            return totale;
+        }
+
+        function es5(N, M) {
+            var table = document.createElement("table");
+            table.style.borderCollapse = "collapse";
+
+            var counter = 1;
+            for (var i = 0; i < N; i++) {
+                var row = document.createElement("tr");
+                for (var j = 0; j < M; j++) {
+                    var cell = document.createElement("td");
+                    cell.textContent = counter++;
+                    cell.style.border = "1px solid black";
+                    cell.style.padding = "5px";
+                    row.appendChild(cell);
+                }
+                table.appendChild(row);
+            }
+
+            document.body.appendChild(table);
+        }
+
+        function es6() {
+            var numbers = Array.from({ length: 10 }, () => Math.floor(Math.random() * 100) + 1);
+            numbers.sort((a, b) => a - b);
+
+            var ul = document.createElement("ul");
+            numbers.forEach(function (number) {
+                var li = document.createElement("li");
+                li.textContent = number;
+                ul.appendChild(li);
+            });
+
+            document.body.appendChild(ul);
+        }
+    
+    </script>
+</head>
+<body>
+    <h1>Test</h1>
+    <script>
+
+        var result = es1(12);
+        var paragraph = document.createElement("p");
+        paragraph.textContent = `${result}`;
+        document.body.appendChild(paragraph);
+
+        es5(5, 4);
+
+        es6();
+    </script>
+</body>
