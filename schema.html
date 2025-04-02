@@ -54,6 +54,7 @@
         var s = "Ciao Mondo";
         var n = 0;
         var vett = [1, 2, 3, 4, 5];
+        var vett2 = [] // Vettore vuoto
 
         // Condizione
         if (n === 0) {
@@ -118,6 +119,9 @@
         var name = "Alice";
         var codAscii = char.charCodeAt(0); // Restituisce il codice ASCII del carattere in posizione 0
 
+        // verifica che l'input sia un numero
+        if (parseFloat(input)===NaN) 
+
         var square1 = Math.pow(2, 2); // Restituisce il quadrato di 2
         var square2 = 2**2; // Restituisce il quadrato di 2
 
@@ -137,6 +141,13 @@
         // arrotondamento all'intero più vicino
         var numero3 = Math.round(numero);
 
+        var numbers = [1, 2, 3, 4, 5];
+        // ordinamento di un array
+        // ordinamento di un array in ordine crescente
+        numbers.sort((a, b) => a - b);
+        // ordinamento di un array in ordine decrescente
+        numbers.sort((a, b) => b - a);
+
         // modifica del contenuto di un elemento HTML
         document.getElementById('idImage').src = "cartella/immagine.png";
         document.getElementById('idProperty').value = 10;
@@ -146,6 +157,30 @@
         var div = document.getElementById('idDiv').innerHTML = 
             `<font size="${size}" color="${color}">${name}</font>`;
         // backtick ` alt + 96
+
+        // creazione di un elemento HTML
+        var table = document.createElement("table");
+        var paragraph = document.createElement("p");
+        var division = document.createElement("div");
+
+        // modifica dello stile di un elemento HTML
+        table.style.borderCollapse = "collapse"; // <table style="border-collapse: collapse;">
+        table.style.border = "1px solid black"; // <table style="border: 1px solid black;">
+
+        // creazione di una tabella con N righe e M colonne
+        var table = document.createElement("table");
+        var counter = 1;
+        for (var i = 0; i < N; i++) {
+            var row = document.createElement("tr");
+            for (var j = 0; j < M; j++) {
+                var cell = document.createElement("td");
+                cell.textContent = counter;
+                counter++;
+                row.appendChild(cell);
+            }
+            table.appendChild(row);
+        }
+        document.body.appendChild(table);
 
     </script>
 </body>

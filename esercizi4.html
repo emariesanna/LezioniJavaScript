@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // 1.	Scrivi una funzione inputNumerico che garantisca di ricevere da tastiera un valore numerico e lo restituisca al programma chiamante [1 punto]
+        function es1() {
+            input = prompt("Inserisci un numero:");
+            input = parseFloat(input);
+            if (input!==NaN) {
+                return input;
+            }
+        }
+
+        // 2.	Scrivi una funzione che riceva una stringa S e un carattere CAR e restituisca 
+        // una stringa con il carattere CAR sostituito da “_” [1 punti]
+        function es2(S, CAR) {
+            var result = "";
+            for (var i = 0; i < S.length; i++) {
+                if (S[i] === CAR) {
+                    result += "_";
+                } else {
+                    result += S[i];
+                }
+            }
+            return result;
+        }
+
+        // 3.	Scrivi una funzione che effettui su un array le seguenti operazioni [1.5 punti]
+        // a.	Filtrare solo i numeri che sono multipli di 3
+        // b.	Convertire i numeri filtrati in stringhe con il prefisso "Num:"
+        // c.	Concatenare tutte le stringhe in un'unica stringa separando i singoli elementi con una  virgola
+        function es3() {
+            
+        }
+
+        // 4.	Scrivi una funzione che prenda una frase e restituisca una stringa contenente solo le iniziali di ogni parola separate dalla “,” [1.5 punti]
+        function es4() {
+            
+        }
+
+        // 5.	Scrivi una funzione che generi una tabella con una colonna contenente i multipli di un numero N minori di un valore MAX [1.5 punti]
+        function es5() {
+            
+        }
+
+        // 6.	Scrivi una funzione che, a partire da un array di stringhe contenente i nomi delle regioni italiane, generi il codice HTML di un elenco a discesa contenente i nomi delle regioni  [1.5 punti]
+        function es6() {
+  
+        }
+    
+    </script>
+</head>
+<body>
+    <h1>Test</h1>
+    <script>
+        var res1 = es1();
+        var p1 = document.createElement("p");
+        p1.textContent = res1;
+        document.body.appendChild(p1);
+
+        var res2 = es2("Torino", "o");
+        var p2 = document.createElement("p");
+        p2.textContent = res2;
+        document.body.appendChild(p2);
+
+    </script>
+</body>

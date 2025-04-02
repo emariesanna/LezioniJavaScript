@@ -6,16 +6,22 @@
     <title>Document</title>
 
     <script>
+        // Scrivi una funzione che garantisca che una stringa ricevuta da tastiera sia più lunga di N caratteri. La funzione deve restituire la stringa al programma chiamante [1 punto]
         function es1(N) {
             var stringa = prompt("Inserisci una stringa più lunga di " + N + " caratteri:");
             if (stringa.length < N) {
-                console.log(`La stringa è troppo corta, ha soltanto ${stringa.length} caratteri.`);
+                var par = document.createElement("p")
+                par.textContent = "La stringa è troppo corta, ha soltanto " + stringa.length + " caratteri.";
+                document.body.appendChild(par);
             } else {
-                console.log(`La stringa è lunga ${stringa.length} caratteri.`);
+                var par = document.createElement("p")
+                par.textContent = "La stringa è lunga" + stringa.length + "caratteri."
+                document.body.appendChild(par);
             }
             return stringa;
         }
 
+        // Scrivi una funzione che maschera con un asterisco (*) tutti i caratteri tranne gli ultimi n di una stringa. (Ad esempio se n=4 e la stringa è maremoto  ****moto) [1 punto]
         function es2(N, stringa) {
             if (stringa.length <= N) {
                 lenght = stringa.length;
@@ -32,7 +38,7 @@
                 stringa += substring;
             }
         }
-
+        
         function es2_alt(N, stringa) {
             N = min(stringa.length, N);
             for (var i = 0; i < N; i++) {
@@ -40,6 +46,7 @@
             }
         }
 
+        // Scrivi una funzione che estrae tutti i numeri da una stringa e li restituisce come un array [1.5 punti]
         function es3(stringa) {
             array = [];
             for (var i = 0; i < stringa.length; i++) {
@@ -47,6 +54,10 @@
             }
         }
 
+        // Scrivi una funzione che effettui su un array le seguenti operazioni [1.5 punti]
+        //      a.	Filtrare solo i numeri >5
+        //      b.	Elevarli a quadrato
+        //      c.	Trovare il totale
         function es4(array) {
             var totale = 0;
             for (var i = 0; i < array.length; i++) {
@@ -57,18 +68,20 @@
             return totale;
         }
 
+        // Scrivi una funzione che crei una tabella con N righe e M colonne contenente i numeri naturali a partire da 1 [1.5 punti]
         function es5(N, M) {
             var table = document.createElement("table");
-            table.style.borderCollapse = "collapse";
+            //table.style.borderCollapse = "collapse"; // <table style="border-collapse: collapse;">
 
             var counter = 1;
             for (var i = 0; i < N; i++) {
                 var row = document.createElement("tr");
                 for (var j = 0; j < M; j++) {
                     var cell = document.createElement("td");
-                    cell.textContent = counter++;
-                    cell.style.border = "1px solid black";
-                    cell.style.padding = "5px";
+                    cell.textContent = counter;
+                    counter++;
+                    //cell.style.border = "1px solid black";
+                    //cell.style.padding = "5px";
                     row.appendChild(cell);
                 }
                 table.appendChild(row);
@@ -77,16 +90,20 @@
             document.body.appendChild(table);
         }
 
+        // Scrivi un programma che a partire da un array di numeri interi casuali compresi fra 1 e 100, li ordini e generi in HTML una lista non ordinata [1.5 punti]
         function es6() {
-            var numbers = Array.from({ length: 10 }, () => Math.floor(Math.random() * 100) + 1);
+            var numbers = [];
+            for (var i = 0; i < 10; i++) {
+                numbers.push(Math.floor(Math.random() * 100) + 1);
+            }
             numbers.sort((a, b) => a - b);
 
             var ul = document.createElement("ul");
-            numbers.forEach(function (number) {
+            for (var i = 0; i < 10; i++) {
                 var li = document.createElement("li");
-                li.textContent = number;
+                li.textContent = numbers[i];
                 ul.appendChild(li);
-            });
+            }
 
             document.body.appendChild(ul);
         }
@@ -99,7 +116,7 @@
 
         var result = es1(12);
         var paragraph = document.createElement("p");
-        paragraph.textContent = `${result}`;
+        paragraph.textContent = result;
         document.body.appendChild(paragraph);
 
         es5(5, 4);
