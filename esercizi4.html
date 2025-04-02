@@ -29,22 +29,65 @@
             return result;
         }
 
-        // 3.	Scrivi una funzione che effettui su un array le seguenti operazioni [1.5 punti]
-        // a.	Filtrare solo i numeri che sono multipli di 3
-        // b.	Convertire i numeri filtrati in stringhe con il prefisso "Num:"
-        // c.	Concatenare tutte le stringhe in un'unica stringa separando i singoli elementi con una  virgola
-        function es3() {
-            
+        function es2_alt(S, CAR) {
+            return S.split(CAR).join("_");
         }
 
-        // 4.	Scrivi una funzione che prenda una frase e restituisca una stringa contenente solo le iniziali di ogni parola separate dalla “,” [1.5 punti]
-        function es4() {
-            
+        function es2_alt2(S, CAR) {
+            while (S.indexOf(CAR) !== -1) {
+                S = S.replace(CAR, "_");
+            }
+            return S;
+        }
+
+        // 3.	Scrivi una funzione che effettui su un array le seguenti operazioni [1.5 punti]
+        //      a.	Filtrare solo i numeri che sono multipli di 3
+        //      b.	Convertire i numeri filtrati in stringhe con il prefisso "Num:"
+        //      c.	Concatenare tutte le stringhe in un'unica stringa separando i singoli elementi con una  virgola
+        function es3(array) {
+            var risultato = [];
+            for (var i = 0; i < array.length; i++) {
+                if (array[i]%3 === 0) {
+                    risultato.push("Num: " + array[i]); // ["Num: 3", "Num: 5", "Num: 1"]
+                }
+            }
+            risultato = risultato.join(",");
+            return risultato;
+        }
+
+        // 4.	Scrivi una funzione che prenda una frase e restituisca una stringa contenente
+        //  solo le iniziali di ogni parola separate dalla “,” [1.5 punti]
+        function es4(phrase) {
+            var risultato = ""
+            var words = phrase.split(" "); // ["word1", "word2", ...]
+            for(var i = 0; i < words.length; i++ ){
+                var iniziale = words[i][0]; // "w"
+                risultato += iniziale;
+                risultato += ",";
+            }
+        }
+
+        function es4_alt(phrase) {
+            var risultato = []
+            var words = phrase.split(" "); // ["word1", "word2", ...]
+            for(var i = 0; i < words.length; i++ ){
+                var iniziale = words[i][0]; // "w"
+                risultato.push(iniziale); // ["w", "w", "w"]
+            }
+            risultato = risultato.join(",")
         }
 
         // 5.	Scrivi una funzione che generi una tabella con una colonna contenente i multipli di un numero N minori di un valore MAX [1.5 punti]
-        function es5() {
-            
+        function es5(N, MAX) {
+            var tabella = document.createElement("table");
+            for (var i = N; i < MAX; i += N){
+                var row = document.createElement("tr");
+                var cell = document.createElement("td");
+                cell.textContent = i;
+                row.appendChild(cell);
+                tabella.appendChild(row);
+            }
+            document.body.appendChild(tabella);
         }
 
         // 6.	Scrivi una funzione che, a partire da un array di stringhe contenente i nomi delle regioni italiane, generi il codice HTML di un elenco a discesa contenente i nomi delle regioni  [1.5 punti]
@@ -62,10 +105,12 @@
         p1.textContent = res1;
         document.body.appendChild(p1);
 
-        var res2 = es2("Torino", "o");
+        var res2 = es2_alt2("Torino", "o");
         var p2 = document.createElement("p");
         p2.textContent = res2;
         document.body.appendChild(p2);
+
+        es5(3, 25);
 
     </script>
 </body>
