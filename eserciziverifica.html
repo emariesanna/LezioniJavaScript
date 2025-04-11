@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        1. Ricevere da tastiera il prezzo di un articolo e la percentuale di sconto (verificare che i dati siano numerici
+        altrimenti richiederli) scrivere utilizzando il titolo più grande il prezzo scontato
+    </p>
+    <script>
+        var prezzo = parseFloat(prompt("Inserisci il prezzo dell'articolo:"));
+        while(isNaN(prezzo)) {
+            prezzo = parseFloat(prompt("Il valore inserito non è un numero. Inserisci il prezzo dell'articolo:"));
+        }
+        var sconto = parseFloat(prompt("Inserisci lo sconto dell'articolo:"));
+        while(isNaN(sconto)) {
+            sconto = parseFloat(prompt("Il valore inserito non è un numero. Inserisci lo sconto dell'articolo:"));
+        }
+
+        var result = document.createElement("h1");
+        result.textContent = prezzo - prezzo * sconto /100;
+        document.body.appendChild(result);
+    </script>
+    <p>
+        2. Ricevere il numero di persone per le quali intendo prenotare il cinema e il giorno (1 - lunedì, 2 - martedì, …) e
+        scrivere in una pagina web il costo totale. Durante la settimana il cinema costa 8€ e il sabato e la domenica 12.
+        Ricordarsi che il martedì il cinema è chiuso (visualizzare un messaggio in una finestra di popup)
+    </p>
+    <script>
+        var persone = parseInt(prompt("Inserisci il numero di persone:"));
+        while(isNaN(persone) || persone < 1) {
+            persone = parseInt(prompt("Il valore inserito non è valido. Inserisci il numero di persone:"));
+        }
+        var giorno = parseInt(prompt("Inserisci il giorno della settimana (1 - lunedì, 2 - martedì, …):"));
+        while(isNaN(giorno) || giorno < 1 || giorno > 7) {
+            giorno = parseInt(prompt("Il valore inserito non è valido. Inserisci il giorno della settimana (1 - lunedì, 2 - martedì, …):"));
+        }
+
+        if (giorno === 2) {
+            alert("Il cinema il martedì è chiuso!");
+        } else {
+            var costoTotale;
+            if (giorno < 6) costoTotale = persone * 8;
+            else costoTotale = persone * 12;
+
+            var cinemaResult = document.createElement("h1");
+            cinemaResult.textContent = costoTotale;
+            document.body.appendChild(cinemaResult);
+        }
+    </script>
+    
+</body>
